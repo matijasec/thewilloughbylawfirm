@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- icon-car: sedan profile + gold impact burst -->
+  <symbol id="icon-car" viewBox="0 0 52 52">
+    <path d="M6 34 L6 28 L10 28 L14 20 L38 20 L42 28 L46 28 L46 34 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M14 20 L17 13 L35 13 L38 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <circle cx="15" cy="35" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="37" cy="35" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="15" cy="35" r="2" fill="currentColor"/>
+    <circle cx="37" cy="35" r="2" fill="currentColor"/>
+    <path d="M18 20 L20 14 L32 14 L34 20" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M4 22 L1 19 M3 27 L0 27 M4 32 L1 35" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="5" cy="27" r="3" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="2,2"/>
+  </symbol>
+
+  <!-- icon-collision: two cars head-on with gold starburst -->
+  <symbol id="icon-collision" viewBox="0 0 52 52">
+    <path d="M2 30 L2 26 L4 26 L7 20 L20 20 L22 26 L22 30 Z" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M7 20 L9 15 L18 15 L20 20" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="7" cy="31" r="3.5" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="18" cy="31" r="3.5" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M50 30 L50 26 L48 26 L45 20 L32 20 L30 26 L30 30 Z" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M45 20 L43 15 L34 15 L32 20" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="45" cy="31" r="3.5" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="34" cy="31" r="3.5" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M26 18 L27.5 23 L32 22 L28.5 25.5 L31 30 L26 28 L21 30 L23.5 25.5 L20 22 L24.5 23 Z" fill="#c9a84c"/>
+  </symbol>
+
+  <!-- icon-truck: 18-wheeler with gold roof stripe -->
+  <symbol id="icon-truck" viewBox="0 0 52 52">
+    <rect x="2" y="18" width="28" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M30 18 L30 36 L50 36 L50 26 L42 18 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M32 19 L40 19 L48 26 L32 26 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="10" cy="38" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="24" cy="38" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="42" cy="38" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <line x1="2" y1="18" x2="30" y2="18" stroke="#c9a84c" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- icon-civil-rights: shield with scales inside, gold § -->
+  <symbol id="icon-civil-rights" viewBox="0 0 52 52">
+    <path d="M26 4 L44 10 L44 28 Q44 42 26 50 Q8 42 8 28 L8 10 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="26" y1="14" x2="26" y2="38" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="15" y1="21" x2="37" y2="21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="17" y1="21" x2="14" y2="29" stroke="currentColor" stroke-width="1"/>
+    <line x1="17" y1="21" x2="20" y2="29" stroke="currentColor" stroke-width="1"/>
+    <line x1="35" y1="21" x2="32" y2="29" stroke="currentColor" stroke-width="1"/>
+    <line x1="35" y1="21" x2="38" y2="29" stroke="currentColor" stroke-width="1"/>
+    <path d="M14 29 Q17 32 20 29" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M32 29 Q35 32 38 29" fill="none" stroke="#c9a84c" stroke-width="1.8"/>
+    <line x1="22" y1="38" x2="30" y2="38" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <text x="26" y="13" font-size="7" fill="#c9a84c" font-family="Georgia,serif" text-anchor="middle" font-weight="bold">§</text>
+  </symbol>
+
+  <!-- icon-government: courthouse with gold star -->
+  <symbol id="icon-government" viewBox="0 0 52 52">
+    <rect x="6" y="22" width="40" height="20" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M4 22 L26 6 L48 22 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="16" y1="22" x2="16" y2="42" stroke="currentColor" stroke-width="1"/>
+    <line x1="26" y1="22" x2="26" y2="42" stroke="currentColor" stroke-width="1"/>
+    <line x1="36" y1="22" x2="36" y2="42" stroke="currentColor" stroke-width="1"/>
+    <rect x="4" y="42" width="44" height="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M26 11 L27.5 15.5 L32 15.5 L28.5 18 L30 22.5 L26 20 L22 22.5 L23.5 18 L20 15.5 L24.5 15.5 Z" fill="#c9a84c"/>
+  </symbol>
+
+  <!-- icon-wrongful-death: scales, one side gold/tipped -->
+  <symbol id="icon-wrongful-death" viewBox="0 0 52 52">
+    <line x1="26" y1="6" x2="26" y2="44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="8" y1="18" x2="44" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="12" y1="18" x2="8" y2="30" stroke="currentColor" stroke-width="1"/>
+    <line x1="12" y1="18" x2="20" y2="30" stroke="currentColor" stroke-width="1"/>
+    <line x1="40" y1="18" x2="32" y2="30" stroke="currentColor" stroke-width="1"/>
+    <line x1="40" y1="18" x2="48" y2="30" stroke="currentColor" stroke-width="1"/>
+    <path d="M8 30 Q14 35 20 30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M32 30 Q38 35 48 30" fill="none" stroke="#c9a84c" stroke-width="2"/>
+    <circle cx="26" cy="6" r="3" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+    <rect x="20" y="44" width="12" height="3" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+
+  <!-- icon-workplace: hard hat + gold lightning bolt -->
+  <symbol id="icon-workplace" viewBox="0 0 52 52">
+    <path d="M10 30 Q10 14 26 12 Q42 14 42 30 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <rect x="7" y="28" width="38" height="5" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <rect x="22" y="18" width="8" height="3" rx="1" fill="#c9a84c"/>
+    <rect x="24" y="16" width="4" height="7" rx="1" fill="#c9a84c"/>
+    <path d="M36 36 L32 44 L37 44 L33 52" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <!-- icon-slip-fall: falling figure + gold wet floor line -->
+  <symbol id="icon-slip-fall" viewBox="0 0 52 52">
+    <circle cx="32" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M32 13 L24 24 L12 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 24 L36 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M12 34 L6 42 M12 34 L20 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="2" y1="46" x2="50" y2="46" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M6 46 Q10 42 14 46" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="44" y1="20" x2="44" y2="32" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="44" cy="36" r="2" fill="#c9a84c"/>
+  </symbol>
+
+  <!-- icon-motorcycle: chunky moto with large wheels + engine mass -->
+  <symbol id="icon-motorcycle" viewBox="0 0 52 52">
+    <circle cx="12" cy="36" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="12" cy="36" r="5" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="40" cy="36" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="40" cy="36" r="5" fill="none" stroke="currentColor" stroke-width="1"/>
+    <rect x="18" y="26" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M18 26 L20 18 L32 18 L34 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <line x1="34" y1="22" x2="40" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="16" x2="32" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="26" y1="16" x2="26" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M18 34 L8 38 L6 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M1 30 L7 30 M1 34 L6 34 M2 38 L6 38" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- icon-no-fee: handshake + gold checkmark -->
+  <symbol id="icon-no-fee" viewBox="0 0 52 52">
+    <path d="M4 28 L4 24 L8 22 L12 22 L12 30 L20 30 Q22 30 22 28 L22 24 Q22 22 24 22 L28 22 Q30 22 30 24 L30 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48 28 L48 24 L44 22 L40 22 L40 30 L30 30 L30 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="4" y1="28" x2="4" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="48" y1="28" x2="48" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 28 L22 34 L36 18" fill="none" stroke="#c9a84c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- icon-medical: cross + pulse line -->
+  <symbol id="icon-medical" viewBox="0 0 52 52">
+    <rect x="20" y="4" width="12" height="44" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="4" y="20" width="44" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M10 26 L16 26 L20 18 L26 34 L29 22 L32 26 L42 26" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- icon-247: phone with clock face -->
+  <symbol id="icon-247" viewBox="0 0 52 52">
+    <rect x="16" y="4" width="20" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="26" cy="42" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="20" y1="10" x2="32" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="26" cy="24" r="9" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+    <line x1="26" y1="24" x2="26" y2="17" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="26" y1="24" x2="31" y2="26" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- icon-consultation: speech bubble + checkmark -->
+  <symbol id="icon-consultation" viewBox="0 0 52 52">
+    <path d="M6 6 L46 6 L46 34 L32 34 L26 46 L20 34 L6 34 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 20 L21 27 L38 12" fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- icon-gavel: clear gavel head + handle + sound block -->
+  <symbol id="icon-gavel" viewBox="0 0 52 52">
+    <rect x="12" y="40" width="28" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <rect x="12" y="40" width="28" height="2.5" rx="1" fill="#c9a84c"/>
+    <line x1="18" y1="36" x2="40" y2="14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M28 6 L40 10 L37 18 L25 14 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="29" y1="8" x2="36" y2="10" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+    <line x1="27" y1="12" x2="34" y2="14" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+    <circle cx="22" cy="38" r="1.5" fill="#c9a84c"/>
+    <circle cx="17" cy="33" r="1" fill="#c9a84c" opacity="0.6"/>
+  </symbol>
+
+  <!-- icon-settlement: briefcase + dollar -->
+  <symbol id="icon-settlement" viewBox="0 0 52 52">
+    <rect x="4" y="22" width="44" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M18 22 L18 16 Q18 10 22 10 L30 10 Q34 10 34 16 L34 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="4" y1="34" x2="48" y2="34" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <line x1="26" y1="30" x2="26" y2="38" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M20 32 A6 4 0 0 1 32 34" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+</svg>

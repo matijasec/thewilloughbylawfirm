@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willoughby Law — Select Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:#0a1628;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem;}
+h1{font-family:'Playfair Display',serif;font-size:2rem;color:#c9a84c;text-align:center;margin-bottom:0.5rem;}
+.sub{color:rgba(255,255,255,0.5);text-align:center;font-size:0.9rem;margin-bottom:3rem;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:900px;width:100%;}
+.card{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:4px;overflow:hidden;transition:all 0.3s;cursor:pointer;text-decoration:none;display:block;}
+.card:hover{border-color:#c9a84c;transform:translateY(-4px);}
+.card-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;}
+.v1-thumb{background:linear-gradient(135deg,#0a1628 0%,#1a3050 100%);}
+.v2-thumb{background:linear-gradient(135deg,#111 0%,#2a0a0a 100%);}
+.v3-thumb{background:linear-gradient(135deg,#1a4a4a 0%,#0d2d2d 100%);}
+.version-badge{position:absolute;top:1rem;left:1rem;background:#c9a84c;color:#0a1628;font-size:0.7rem;font-weight:700;padding:0.3rem 0.75rem;letter-spacing:0.1em;text-transform:uppercase;}
+.card-body{padding:1.5rem;}
+.card-name{font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:0.4rem;}
+.card-desc{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:1rem;}
+.card-link{font-size:0.8rem;color:#c9a84c;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;}
+.note{margin-top:3rem;max-width:600px;text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.3);line-height:1.7;}
+.note strong{color:rgba(255,255,255,0.5);}
+@media(max-width:700px){.cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<h1>The Willoughby Law Firm</h1>
+<p class="sub">Three mockup directions — select one to view full site</p>
+<div class="cards">
+  <a href="v1/index.html" class="card">
+    <div class="card-thumb v1-thumb">
+      <div class="version-badge">Version 1</div>
+      <svg width="60" height="60" viewBox="0 0 52 52" fill="none" style="opacity:0.4"><line x1="26" y1="6" x2="26" y2="44" stroke="#c9a84c" stroke-width="1.5"/><line x1="8" y1="18" x2="44" y2="18" stroke="#c9a84c" stroke-width="1.5"/><path d="M8 30 Q14 35 20 30" fill="none" stroke="white" stroke-width="1.5"/><path d="M32 30 Q38 35 48 30" fill="none" stroke="#c9a84c" stroke-width="2"/><circle cx="26" cy="6" r="3" fill="none" stroke="#c9a84c" stroke-width="1.5"/></svg>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Navy &amp; Gold — Premium</div>
+      <div class="card-desc">Playfair Display serif, deep navy with gold accents. Sophisticated boutique feel. Best for complex litigation and high-value clients.</div>
+      <div class="card-link">Open V1 →</div>
+    </div>
+  </a>
+  <a href="v2/index.html" class="card">
+    <div class="card-thumb v2-thumb">
+      <div class="version-badge">Version 2</div>
+      <svg width="60" height="60" viewBox="0 0 52 52" fill="none" style="opacity:0.4"><rect x="12" y="40" width="28" height="7" rx="2" stroke="white" stroke-width="1.6"/><line x1="18" y1="36" x2="40" y2="14" stroke="white" stroke-width="3" stroke-linecap="round"/><path d="M28 6 L40 10 L37 18 L25 14 Z" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-linejoin="round"/><rect x="12" y="40" width="28" height="2.5" rx="1" fill="#c0392b"/></svg>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Black &amp; Red — Aggressive</div>
+      <div class="card-desc">Barlow Condensed, bold typography, animated ticker. Maximum urgency. Best for PPC traffic and high-volume personal injury.</div>
+      <div class="card-link">Open V2 →</div>
+    </div>
+  </a>
+  <a href="v3/index.html" class="card">
+    <div class="card-thumb v3-thumb">
+      <div class="version-badge">Version 3</div>
+      <svg width="60" height="60" viewBox="0 0 52 52" fill="none" style="opacity:0.4"><path d="M26 4 L44 10 L44 28 Q44 42 26 50 Q8 42 8 28 L8 10 Z" fill="none" stroke="#c8a96e" stroke-width="1.6" stroke-linejoin="round"/><path d="M32 29 Q35 32 38 29" fill="none" stroke="#c8a96e" stroke-width="1.8"/><text x="26" y="13" font-size="7" fill="#c8a96e" font-family="Georgia,serif" text-anchor="middle" font-weight="bold">§</text></svg>
+    </div>
+    <div class="card-body">
+      <div class="card-name">Teal &amp; Gold — Refined</div>
+      <div class="card-desc">Cormorant Garamond, quiet luxury. Signals a selective, trial-ready firm. Best for high-value clients who want serious representation.</div>
+      <div class="card-link">Open V3 →</div>
+    </div>
+  </a>
+</div>
+<p class="note"><strong>To host:</strong> Upload this entire folder to <code>willoughby.qedip.com</code> via FTP/SFTP or your host's file manager. The <code>index.html</code> you're reading now is the selector. Each version is a self-contained folder (<code>/v1/</code>, <code>/v2/</code>, <code>/v3/</code>). No server-side code required — pure HTML.</p>
+</body>
+</html>

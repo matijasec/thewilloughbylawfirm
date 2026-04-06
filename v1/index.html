@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Willoughby Law Firm | Houston Personal Injury Attorney</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --light-gray: #f3f4f6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: var(--navy); background: var(--white); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 999;
+  background: rgba(10,22,40,0.97); backdrop-filter: blur(10px);
+  padding: 0 3rem; height: 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--white); font-size: 1.3rem; letter-spacing: 0.05em;
+  display: flex; flex-direction: column; line-height: 1.2;
+}
+.nav-logo span { color: var(--gold); font-size: 0.7rem; font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold); color: var(--navy) !important; padding: 0.6rem 1.5rem; border-radius: 2px; font-weight: 700 !important; transition: background 0.3s !important; }
+.nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  padding-top: 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.6) 60%, transparent 100%),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&q=80') center/cover no-repeat;
+}
+.hero-decor {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 45%;
+  background: linear-gradient(to left, rgba(201,168,76,0.08), transparent);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1300px; margin: 0 auto; padding: 0 3rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  width: 100%;
+}
+.hero-left {}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  color: var(--gold); font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--white); line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-size: 1.15rem; color: rgba(255,255,255,0.7);
+  line-height: 1.8; margin-bottom: 2.5rem; max-width: 500px;
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: var(--navy);
+  padding: 1rem 2.5rem; font-weight: 700; font-size: 1rem;
+  text-decoration: none; border-radius: 2px; letter-spacing: 0.05em;
+  transition: all 0.3s; display: inline-block;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.4); color: var(--white);
+  padding: 1rem 2.5rem; font-weight: 600; font-size: 1rem;
+  text-decoration: none; border-radius: 2px; letter-spacing: 0.05em;
+  transition: all 0.3s; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-stats {
+  display: flex; gap: 3rem; margin-top: 3rem; padding-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.stat-item {}
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); font-weight: 900; line-height: 1; }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.3rem; }
+
+/* CONTACT CARD */
+.hero-right {}
+.contact-card {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+.contact-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem;
+}
+.contact-card .sub { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--navy); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 0.75rem 1rem;
+  border: 1.5px solid #e5e7eb; border-radius: 2px;
+  font-family: 'Source Sans 3', sans-serif; font-size: 0.95rem;
+  color: var(--navy); transition: border-color 0.3s;
+  background: #fafafa;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--gold); background: var(--white);
+}
+.form-group textarea { height: 80px; resize: none; }
+.form-submit {
+  width: 100%; background: var(--navy); color: var(--white);
+  border: none; padding: 1rem; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+  border-radius: 2px; transition: background 0.3s; margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--gold); color: var(--navy); }
+.no-fee { text-align: center; margin-top: 1rem; font-size: 0.8rem; color: var(--gray); }
+.no-fee strong { color: var(--gold); }
+.phone-cta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--navy); border-radius: 2px; }
+.phone-icon { font-size: 1.5rem; }
+.phone-text { color: var(--white); }
+.phone-text .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; }
+.phone-text .number { font-size: 1.3rem; font-weight: 700; color: var(--gold); letter-spacing: 0.05em; }
+
+/* TRUST BAR */
+.trust-bar {
+  background: var(--gold);
+  padding: 1.5rem 3rem;
+  display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  color: var(--navy); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.trust-item .check { font-size: 1.2rem; }
+
+/* PRACTICE AREAS */
+.section { padding: 6rem 3rem; max-width: 1300px; margin: 0 auto; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  color: var(--gold); font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-label::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-intro { font-size: 1.1rem; color: var(--gray); max-width: 650px; line-height: 1.8; margin-bottom: 3rem; }
+.areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: #e5e7eb; border: 1.5px solid #e5e7eb; }
+.area-card {
+  background: var(--white); padding: 2rem;
+  transition: all 0.3s; cursor: pointer;
+  position: relative; overflow: hidden;
+}
+.area-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold); transform: scaleY(0); transition: transform 0.3s; transform-origin: bottom;
+}
+.area-card:hover { background: var(--navy); }
+.area-card:hover::before { transform: scaleY(1); }
+.area-card:hover .area-title { color: var(--white); }
+.area-card:hover .area-desc { color: rgba(255,255,255,0.6); }
+.area-card:hover .area-icon { color: var(--gold); }
+.area-icon { font-size: 2rem; margin-bottom: 1rem; transition: color 0.3s; }
+.area-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; transition: color 0.3s; }
+.area-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.6; transition: color 0.3s; }
+
+/* ABOUT */
+.about-section { background: var(--cream); padding: 6rem 0; }
+.about-inner { max-width: 1300px; margin: 0 auto; padding: 0 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.about-img {
+  position: relative;
+}
+.about-img-main {
+  width: 100%; height: 550px;
+  background: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&q=80') center/cover;
+  border-radius: 2px;
+}
+.about-badge {
+  position: absolute; bottom: -2rem; right: -2rem;
+  background: var(--gold); padding: 1.5rem 2rem; border-radius: 2px;
+  text-align: center;
+}
+.about-badge .years { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--navy); font-weight: 900; line-height: 1; }
+.about-badge .years-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--navy); font-weight: 700; }
+.about-text .section-label { display: inline-flex; }
+.about-text p { font-size: 1.05rem; color: #4b5563; line-height: 1.9; margin-bottom: 1.5rem; }
+.credentials { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.cred-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+.cred-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
+
+/* VERDICTS */
+.verdicts-section { background: var(--navy); padding: 6rem 0; }
+.verdicts-inner { max-width: 1300px; margin: 0 auto; padding: 0 3rem; }
+.verdicts-inner .section-label::before { background: var(--gold); }
+.verdicts-inner .section-label { color: var(--gold); }
+.verdicts-inner h2 { color: var(--white); }
+.verdicts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); margin-top: 3rem; }
+.verdict-card { background: rgba(255,255,255,0.03); padding: 2.5rem 2rem; text-align: center; transition: background 0.3s; }
+.verdict-card:hover { background: rgba(201,168,76,0.1); }
+.verdict-amount { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold); font-weight: 900; }
+.verdict-type { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+.verdict-note { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 0.75rem; font-style: italic; }
+
+/* TESTIMONIALS */
+.testimonials-section { padding: 6rem 0; background: var(--light-gray); }
+.testimonials-inner { max-width: 1300px; margin: 0 auto; padding: 0 3rem; }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.testi-card { background: var(--white); padding: 2.5rem; border-radius: 2px; border-top: 3px solid var(--gold); }
+.testi-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; }
+.testi-text { font-size: 1rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 1rem; }
+.testi-avatar { width: 45px; height: 45px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: 700; font-family: 'Playfair Display', serif; }
+.testi-name { font-weight: 700; color: var(--navy); font-size: 0.95rem; }
+.testi-case { font-size: 0.8rem; color: var(--gray); }
+
+/* CTA SECTION */
+.cta-section { background: var(--gold); padding: 5rem 3rem; text-align: center; }
+.cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 1rem; }
+.cta-section p { font-size: 1.1rem; color: rgba(10,22,40,0.7); margin-bottom: 2rem; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-btn-dark { background: var(--navy); color: var(--white); padding: 1.1rem 3rem; font-weight: 700; font-size: 1rem; text-decoration: none; border-radius: 2px; letter-spacing: 0.05em; transition: all 0.3s; }
+.cta-btn-dark:hover { background: #1a2d4a; transform: translateY(-2px); }
+.phone-big { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy); font-weight: 900; margin-top: 1rem; }
+
+/* FOOTER */
+footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 4rem 3rem 2rem; }
+.footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand {}
+.footer-logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.3rem; margin-bottom: 1rem; }
+.footer-tagline { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+.footer-address { font-size: 0.85rem; line-height: 1.8; }
+.footer-col h4 { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 1.5rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.75rem; }
+.footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom { max-width: 1300px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; font-size: 0.8rem; flex-wrap: wrap; gap: 1rem; }
+.disclaimer { max-width: 1300px; margin: 1rem auto 0; font-size: 0.75rem; color: rgba(255,255,255,0.25); line-height: 1.6; }
+
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+  .about-inner { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .verdicts-grid { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hero-content, .section { padding: 0 1.5rem; }
+  .areas-grid { grid-template-columns: 1fr; }
+  .verdicts-grid { grid-template-columns: 1fr 1fr; }
+  .about-img-main { height: 300px; }
+  .about-badge { right: 0; bottom: -1rem; }
+  footer { padding: 3rem 1.5rem 2rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .trust-bar { gap: 1.5rem; padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    The Willoughby Law Firm
+    <span>Personal Injury · Houston, Texas</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#practice-areas">Practice Areas</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-decor"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="eyebrow">Houston Personal Injury Attorney</div>
+      <h1>Fighting For the <em>Justice</em> You Deserve</h1>
+      <p class="hero-sub">When negligence leaves you injured, you need a tenacious advocate in your corner. Joshua R. Willoughby has recovered millions for injured Texans — and he doesn't get paid unless you win.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Free Case Evaluation</a>
+        <a href="tel:7132221356" class="btn-outline">📞 (713) 222-1356</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">$M+</div>
+          <div class="stat-label">Recovered for Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Cases Won</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">No Fee</div>
+          <div class="stat-label">Unless We Win</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right" id="contact">
+      <div class="contact-card">
+        <div class="phone-cta">
+          <div class="phone-icon">📞</div>
+          <div class="phone-text">
+            <div class="label">Available 24/7 · Call Now</div>
+            <div class="number">(713) 222-1356</div>
+          </div>
+        </div>
+        <h3>Get Your Free Consultation</h3>
+        <p class="sub">Confidential · No Obligation · Respond Within Hours</p>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(713) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Type of Case</label>
+          <select>
+            <option>Car / Truck Accident</option>
+            <option>18-Wheeler Accident</option>
+            <option>Slip & Fall</option>
+            <option>Workplace Injury</option>
+            <option>Wrongful Death</option>
+            <option>Civil Rights Violation</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Brief Description</label>
+          <textarea placeholder="Tell us what happened..."></textarea>
+        </div>
+        <button class="form-submit">Send My Case Details →</button>
+        <p class="no-fee">✓ <strong>No Fee Unless We Win</strong> &nbsp;·&nbsp; 100% Confidential</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span class="check">⚖️</span> Board Certified Trial Attorney</div>
+  <div class="trust-item"><span class="check">✓</span> No Fee Unless We Win</div>
+  <div class="trust-item"><span class="check">🏆</span> Top Personal Injury Verdicts — Texas</div>
+  <div class="trust-item"><span class="check">⏰</span> Available 24 / 7</div>
+</div>
+
+<section class="section" id="practice-areas">
+  <div class="section-label">What We Handle</div>
+  <h2>Practice Areas</h2>
+  <p class="section-intro">From devastating car crashes to complex civil rights violations, we fight for the full compensation you're owed — not the quick settlement insurers push.</p>
+  <div class="areas-grid">
+    <div class="area-card">
+      <div class="area-icon">🚗</div>
+      <div class="area-title">Car & Truck Accidents</div>
+      <div class="area-desc">Rear-ends, T-bones, DUI crashes — we pursue all liable parties and their insurers aggressively.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🚛</div>
+      <div class="area-title">18-Wheeler & Commercial Vehicles</div>
+      <div class="area-desc">Complex trucking cases involving FMCSA violations, black-box data, and carrier liability.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">⚖️</div>
+      <div class="area-title">Civil Rights Violations (§ 1983)</div>
+      <div class="area-desc">Excessive force, unlawful detention, and government misconduct — holding agencies accountable.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🏗️</div>
+      <div class="area-title">Workplace & Construction Injuries</div>
+      <div class="area-desc">Serious on-the-job injuries deserve more than workers' comp minimums. We fight for full value.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🏛️</div>
+      <div class="area-title">Government Entity Claims (TTCA)</div>
+      <div class="area-desc">Crashes involving city and county vehicles. Strict notice requirements — don't delay.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🕊️</div>
+      <div class="area-title">Wrongful Death</div>
+      <div class="area-desc">When someone you love is taken by another's negligence, we fight to hold them fully accountable.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🏢</div>
+      <div class="area-title">Premises Liability</div>
+      <div class="area-desc">Slip and falls, negligent security, and property hazards — property owners owe you a safe environment.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🏍️</div>
+      <div class="area-title">Motorcycle Accidents</div>
+      <div class="area-desc">Riders face bias from insurers. We level the playing field with experience and evidence.</div>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🐕</div>
+      <div class="area-title">Dog Bites & Animal Attacks</div>
+      <div class="area-desc">Texas holds owners strictly liable. We recover for medical bills, scarring, and trauma.</div>
+    </div>
+  </div>
+</section>
+
+<div class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-img">
+      <div class="about-img-main"></div>
+      <div class="about-badge">
+        <div class="years">10+</div>
+        <div class="years-label">Years Fighting<br>for Houston</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-label">Your Attorney</div>
+      <h2>Joshua R. Willoughby</h2>
+      <p>Joshua Willoughby founded The Willoughby Law Firm with a single purpose: to ensure that injured Texans — not insurance companies — get what they're owed. His practice spans the full range of personal injury litigation, from straightforward auto accidents to complex civil rights cases against government entities.</p>
+      <p>Based in Midtown Houston at 4306 Yoakum Blvd, Josh and his team provide hands-on representation at every stage of your case. He doesn't hand your file off to a paralegal — he knows your case, knows the law, and prepares for trial from day one.</p>
+      <div class="credentials">
+        <div class="cred-item"><div class="cred-dot"></div> Texas Bar Association</div>
+        <div class="cred-item"><div class="cred-dot"></div> Texas Trial Lawyers Association</div>
+        <div class="cred-item"><div class="cred-dot"></div> Houston Bar Association</div>
+        <div class="cred-item"><div class="cred-dot"></div> U.S. District Court, S.D. Tex.</div>
+      </div>
+      <br><a href="#contact" class="btn-primary" style="margin-top:1rem;">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</div>
+
+<div class="verdicts-section" id="results">
+  <div class="verdicts-inner">
+    <div class="section-label">Our Track Record</div>
+    <h2 style="color:white">Results That Speak for Themselves</h2>
+    <p style="color:rgba(255,255,255,0.5); margin-top:0.5rem; max-width:600px; line-height:1.8">Every number below represents a real person whose life was changed — and a fight we refused to lose.</p>
+    <div class="verdicts-grid">
+      <div class="verdict-card">
+        <div class="verdict-amount">$2.4M</div>
+        <div class="verdict-type">18-Wheeler Collision</div>
+        <div class="verdict-note">Harris County · Spinal Injury</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-amount">$1.85M</div>
+        <div class="verdict-type">Civil Rights — § 1983</div>
+        <div class="verdict-note">S.D. Texas · Excessive Force</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-amount">$950K</div>
+        <div class="verdict-type">Wrongful Death</div>
+        <div class="verdict-note">Galveston County</div>
+      </div>
+      <div class="verdict-card">
+        <div class="verdict-amount">$780K</div>
+        <div class="verdict-type">Construction Site Injury</div>
+        <div class="verdict-note">Harris County</div>
+      </div>
+    </div>
+    <p style="color:rgba(255,255,255,0.25); font-size:0.75rem; margin-top:2rem; font-style:italic;">Past results do not guarantee future outcomes. Each case is unique.</p>
+  </div>
+</div>
+
+<div class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-label">Client Stories</div>
+    <h2>What Our Clients Say</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"After my accident I didn't know what to do. Josh took over everything — dealt with the insurance company, got my medical bills covered, and won me a settlement I never expected. He treats you like family."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div><div class="testi-name">Maria T.</div><div class="testi-case">Auto Accident · Houston</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Josh took my civil rights case when other attorneys wouldn't. He knew the law inside and out and never backed down. Two years later we won. I can't thank him enough."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div><div class="testi-name">Darnell W.</div><div class="testi-case">§ 1983 Civil Rights · S.D. Texas</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The trucking company's insurer kept lowballing us. Willoughby Law Firm took it to the mat and got us three times what they offered. Worth every minute of the fight."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div><div class="testi-name">Roberto E.</div><div class="testi-case">18-Wheeler Accident · I-10</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Injured? Talk to Josh Today.</h2>
+  <p>Your consultation is free, confidential, and carries no obligation. We'll tell you exactly what your case is worth.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="cta-btn-dark">Start Your Free Case Review</a>
+  </div>
+  <div class="phone-big"><a href="tel:7132221356" style="color:inherit;text-decoration:none;">(713) 222-1356</a></div>
+  <p style="color:rgba(10,22,40,0.5); margin-top:0.5rem; font-size:0.85rem;">Available 24/7 · No Fee Unless We Win</p>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">The Willoughby Law Firm, PLLC</div>
+      <p class="footer-tagline">Fighting for injured Texans throughout Houston and Harris County. We take your case personally because your life depends on it.</p>
+      <div class="footer-address">
+        4306 Yoakum Blvd, Suite 330<br>
+        Houston, Texas 77006<br><br>
+        <a href="tel:7132221356" style="color:var(--gold); text-decoration:none;">(713) 222-1356</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Practice Areas</h4>
+      <ul>
+        <li><a href="#">Car Accidents</a></li>
+        <li><a href="#">18-Wheeler Crashes</a></li>
+        <li><a href="#">Civil Rights (§ 1983)</a></li>
+        <li><a href="#">Wrongful Death</a></li>
+        <li><a href="#">Workplace Injuries</a></li>
+        <li><a href="#">Premises Liability</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Firm</h4>
+      <ul>
+        <li><a href="#">About Josh</a></li>
+        <li><a href="#">Case Results</a></li>
+        <li><a href="#">Client Reviews</a></li>
+        <li><a href="#">Blog / Resources</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:7132221356">(713) 222-1356</a></li>
+        <li><a href="#">Free Consultation</a></li>
+        <li><a href="#">Directions</a></li>
+        <li><a href="#">Midtown Houston</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 The Willoughby Law Firm, PLLC · All Rights Reserved</span>
+    <span><a href="#" style="color:inherit; text-decoration:none; margin-right:1rem;">Privacy Policy</a><a href="#" style="color:inherit; text-decoration:none;">Disclaimer</a></span>
+  </div>
+  <p class="disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship. Past results do not guarantee similar outcomes in future cases. Joshua R. Willoughby is licensed to practice law in Texas.</p>
+</footer>
+
+</body>
+</html>

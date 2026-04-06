@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willoughby Law Firm | Houston TX Personal Injury Lawyers</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #c0392b;
+  --red-dark: #96281b;
+  --black: #111111;
+  --white: #ffffff;
+  --light: #f7f7f7;
+  --gray: #666;
+  --border: #e0e0e0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Barlow', sans-serif; color: var(--black); background: var(--white); }
+
+/* NAV */
+nav {
+  background: var(--black); position: fixed; top: 0; width: 100%; z-index: 999;
+  height: 70px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4rem;
+}
+.nav-logo-text {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.5rem;
+  color: var(--white); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.nav-logo-text span { color: var(--red); }
+.nav-phone {
+  color: var(--white); font-size: 1.1rem; font-weight: 600; text-decoration: none;
+  background: var(--red); padding: 0.5rem 1.5rem; display: flex; align-items: center; gap: 0.5rem;
+  transition: background 0.2s;
+}
+.nav-phone:hover { background: var(--red-dark); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--red); }
+
+/* HERO */
+.hero {
+  min-height: 100vh; padding-top: 70px;
+  display: grid; grid-template-columns: 1fr 480px;
+  overflow: hidden;
+}
+.hero-left {
+  background: var(--black);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  padding: 4rem;
+}
+.hero-photo {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80') center/cover no-repeat;
+  opacity: 0.3;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(17,17,17,0.95) 40%, rgba(17,17,17,0.5) 100%);
+}
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+.hero-badge {
+  display: inline-block; background: var(--red); color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 0.4rem 1rem; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(3rem, 6vw, 5.5rem); color: var(--white);
+  text-transform: uppercase; line-height: 0.95; margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.hero h1 .red { color: var(--red); }
+.hero-desc { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 500px; margin-bottom: 2.5rem; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-red {
+  background: var(--red); color: var(--white);
+  padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em;
+  text-decoration: none; transition: background 0.2s; display: inline-block;
+}
+.btn-red:hover { background: var(--red-dark); }
+.btn-white {
+  background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4);
+  padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em;
+  text-decoration: none; transition: all 0.2s; display: inline-block;
+}
+.btn-white:hover { border-color: var(--red); color: var(--red); }
+.hero-numbers { display: flex; gap: 3rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.hero-num .n { font-family: 'Barlow Condensed', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--red); line-height: 1; }
+.hero-num .l { font-size: 0.75rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+
+/* FORM PANEL */
+.hero-right { background: var(--white); padding: 3rem 2.5rem; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; }
+.form-header { margin-bottom: 2rem; }
+.form-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.5rem; }
+.form-header p { color: var(--gray); font-size: 0.95rem; }
+.call-strip {
+  background: var(--black); padding: 1rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.call-strip .label { color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.call-strip .num { color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--red); }
+.call-strip .avail { color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+.fg { margin-bottom: 0.9rem; }
+.fg label { display: block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--black); margin-bottom: 0.35rem; }
+.fg input, .fg select, .fg textarea {
+  width: 100%; padding: 0.8rem 1rem; border: 2px solid var(--border);
+  font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: var(--black);
+  transition: border-color 0.2s; background: #fafafa;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--red); background: var(--white); }
+.fg textarea { height: 80px; resize: none; }
+.fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.submit-btn {
+  width: 100%; background: var(--red); color: var(--white); border: none;
+  padding: 1.1rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.12em;
+  cursor: pointer; transition: background 0.2s; margin-top: 0.5rem;
+}
+.submit-btn:hover { background: var(--red-dark); }
+.form-note { font-size: 0.78rem; color: var(--gray); text-align: center; margin-top: 0.75rem; }
+
+/* TICKER */
+.ticker { background: var(--red); padding: 0.75rem 0; overflow: hidden; }
+.ticker-inner { display: flex; gap: 4rem; white-space: nowrap; animation: ticker 25s linear infinite; }
+.ticker-item { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); display: flex; align-items: center; gap: 1rem; }
+.ticker-item::before { content: '★'; color: rgba(255,255,255,0.5); }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* PROCESS */
+.process-section { padding: 6rem 4rem; background: var(--light); }
+.process-inner { max-width: 1200px; margin: 0 auto; }
+.section-head { text-align: center; margin-bottom: 4rem; }
+.section-tag {
+  display: inline-block; background: var(--red); color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.2em; padding: 0.3rem 1rem; margin-bottom: 1rem;
+}
+.section-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 4vw, 3.5rem); text-transform: uppercase; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.process-steps::before { content: ''; position: absolute; top: 3rem; left: 15%; right: 15%; height: 2px; background: var(--red); opacity: 0.3; }
+.step { text-align: center; padding: 0 1.5rem; }
+.step-num {
+  width: 60px; height: 60px; background: var(--black); color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;
+  position: relative; z-index: 1;
+}
+.step.active .step-num { background: var(--red); }
+.step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem; }
+.step p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+/* CASES */
+.cases-section { padding: 6rem 4rem; }
+.cases-inner { max-width: 1200px; margin: 0 auto; }
+.cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3rem; }
+.case-card {
+  background: var(--black); padding: 2.5rem 2rem;
+  transition: background 0.2s; cursor: pointer;
+  border-left: 4px solid transparent; position: relative;
+}
+.case-card:hover { background: #1a1a1a; border-left-color: var(--red); }
+.case-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.case-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+.case-desc { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+.case-link { position: absolute; bottom: 2rem; right: 2rem; color: var(--red); font-size: 1.2rem; opacity: 0; transition: opacity 0.2s; }
+.case-card:hover .case-link { opacity: 1; }
+
+/* ATTORNEY */
+.attorney-section { padding: 6rem 4rem; background: var(--light); }
+.attorney-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 400px 1fr; gap: 5rem; align-items: start; }
+.atty-img-wrap { position: relative; }
+.atty-img {
+  width: 100%; height: 500px;
+  background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80') center top/cover;
+}
+.atty-name-plate {
+  background: var(--red); padding: 1.5rem 2rem;
+  display: flex; flex-direction: column;
+}
+.atty-name-plate .name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.6rem; color: var(--white); text-transform: uppercase; }
+.atty-name-plate .title { color: rgba(255,255,255,0.7); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+.atty-content .section-tag { margin-bottom: 1rem; }
+.atty-content h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1.5rem; line-height: 1; }
+.atty-content p { font-size: 1rem; color: #444; line-height: 1.8; margin-bottom: 1.25rem; }
+.bar-items { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+.bar-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--white); border-left: 3px solid var(--red); }
+.bar-item .icon { font-size: 1.2rem; }
+.bar-item .text { font-size: 0.85rem; font-weight: 600; color: var(--black); }
+
+/* VERDICTS */
+.verdicts-section { background: var(--black); padding: 6rem 4rem; }
+.verdicts-inner { max-width: 1200px; margin: 0 auto; }
+.verdicts-inner .section-tag { display: inline-block; margin-bottom: 1rem; }
+.verdicts-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; text-transform: uppercase; color: var(--white); margin-bottom: 3rem; }
+.v-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.v-card { background: rgba(255,255,255,0.04); padding: 2rem 1.5rem; border-bottom: 3px solid var(--red); }
+.v-amount { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--red); }
+.v-type { color: var(--white); font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
+.v-detail { color: rgba(255,255,255,0.3); font-size: 0.8rem; margin-top: 0.3rem; font-style: italic; }
+
+/* REVIEWS */
+.reviews-section { padding: 6rem 4rem; background: var(--white); }
+.reviews-inner { max-width: 1200px; margin: 0 auto; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.review-card { border: 2px solid var(--border); padding: 2rem; transition: border-color 0.2s; }
+.review-card:hover { border-color: var(--red); }
+.review-stars { color: var(--red); font-size: 1.1rem; margin-bottom: 1rem; }
+.review-text { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+.review-author { border-top: 1px solid var(--border); padding-top: 1rem; }
+.review-name { font-weight: 700; font-size: 0.9rem; }
+.review-case { font-size: 0.8rem; color: var(--red); margin-top: 0.2rem; }
+
+/* FINAL CTA */
+.final-cta { background: var(--red); padding: 6rem 4rem; text-align: center; }
+.final-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 6vw, 5rem); text-transform: uppercase; color: var(--white); margin-bottom: 1rem; line-height: 0.95; }
+.final-cta p { color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 2rem; }
+.cta-phone { font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--white); margin-top: 1rem; display: block; text-decoration: none; }
+.cta-phone:hover { color: rgba(255,255,255,0.8); }
+.btn-cta-white {
+  background: var(--white); color: var(--red); padding: 1.1rem 3rem;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem;
+  text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; display: inline-block;
+  transition: all 0.2s;
+}
+.btn-cta-white:hover { background: var(--black); color: var(--white); }
+
+/* FOOTER */
+footer { background: #0a0a0a; padding: 4rem 4rem 2rem; }
+.footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 3rem; margin-bottom: 2rem; }
+.f-brand .f-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 1rem; }
+.f-brand .f-logo span { color: var(--red); }
+.f-brand p { color: rgba(255,255,255,0.4); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+.f-brand address { color: rgba(255,255,255,0.5); font-size: 0.85rem; line-height: 1.7; font-style: normal; }
+.f-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); margin-bottom: 1.5rem; }
+.f-col ul { list-style: none; }
+.f-col ul li { margin-bottom: 0.6rem; }
+.f-col ul li a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.f-col ul li a:hover { color: var(--red); }
+.footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { color: rgba(255,255,255,0.2); font-size: 0.8rem; }
+.disclaimer { max-width: 1200px; margin: 1.5rem auto 0; color: rgba(255,255,255,0.15); font-size: 0.7rem; line-height: 1.6; }
+
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .attorney-inner { grid-template-columns: 1fr; }
+  .cases-grid, .v-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .process-steps::before { display: none; }
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo-text">WILLOUGHBY<span> LAW</span></div>
+  <ul class="nav-links">
+    <li><a href="#cases">Practice Areas</a></li>
+    <li><a href="#attorney">About Josh</a></li>
+    <li><a href="#verdicts">Results</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+  <a href="tel:7132221356" class="nav-phone">📞 (713) 222-1356</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-photo"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Houston Personal Injury Attorney</div>
+      <h1>We Fight.<br>You <span class="red">Win.</span></h1>
+      <p class="hero-desc">Insurance companies have billion-dollar legal teams. You need someone who hits back harder. Joshua R. Willoughby doesn't settle for low offers — he takes cases to trial and wins.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-red">Free Case Review</a>
+        <a href="tel:7132221356" class="btn-white">Call 24/7</a>
+      </div>
+      <div class="hero-numbers">
+        <div class="hero-num"><div class="n">$M+</div><div class="l">Client Recovery</div></div>
+        <div class="hero-num"><div class="n">500+</div><div class="l">Cases Won</div></div>
+        <div class="hero-num"><div class="n">0%</div><div class="l">Fee Unless Win</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right" id="contact">
+    <div class="form-header">
+      <h2>Free Case<br>Evaluation</h2>
+      <p>Tell us what happened. We'll tell you what it's worth.</p>
+    </div>
+    <div class="call-strip">
+      <div><div class="label">Call Now</div><div class="num">(713) 222-1356</div></div>
+      <div class="avail">Available 24/7</div>
+    </div>
+    <div class="fg-row">
+      <div class="fg"><label>First Name</label><input type="text" placeholder="First"></div>
+      <div class="fg"><label>Last Name</label><input type="text" placeholder="Last"></div>
+    </div>
+    <div class="fg"><label>Phone</label><input type="tel" placeholder="(713) 000-0000"></div>
+    <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+    <div class="fg">
+      <label>Type of Case</label>
+      <select>
+        <option>Car / Truck Accident</option>
+        <option>18-Wheeler / Commercial Vehicle</option>
+        <option>Slip & Fall</option>
+        <option>Workplace Injury</option>
+        <option>Wrongful Death</option>
+        <option>Civil Rights (§ 1983)</option>
+        <option>Government Vehicle Crash</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="fg"><label>What Happened?</label><textarea placeholder="Brief description of your injury and how it occurred..."></textarea></div>
+    <button class="submit-btn">Get My Free Case Review →</button>
+    <p class="form-note">✓ Confidential &nbsp;·&nbsp; No fee unless we win &nbsp;·&nbsp; Respond in hours</p>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">No Fee Unless We Win</span>
+    <span class="ticker-item">24/7 Available</span>
+    <span class="ticker-item">Car & Truck Accidents</span>
+    <span class="ticker-item">Civil Rights Violations</span>
+    <span class="ticker-item">Wrongful Death</span>
+    <span class="ticker-item">18-Wheeler Crashes</span>
+    <span class="ticker-item">Free Consultation</span>
+    <span class="ticker-item">Serving Houston & Harris County</span>
+    <span class="ticker-item">No Fee Unless We Win</span>
+    <span class="ticker-item">24/7 Available</span>
+    <span class="ticker-item">Car & Truck Accidents</span>
+    <span class="ticker-item">Civil Rights Violations</span>
+    <span class="ticker-item">Wrongful Death</span>
+    <span class="ticker-item">18-Wheeler Crashes</span>
+    <span class="ticker-item">Free Consultation</span>
+    <span class="ticker-item">Serving Houston & Harris County</span>
+  </div>
+</div>
+
+<section class="process-section">
+  <div class="process-inner">
+    <div class="section-head">
+      <div class="section-tag">How It Works</div>
+      <h2>Your Path to Justice</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step active">
+        <div class="step-num">01</div>
+        <h3>Free Consultation</h3>
+        <p>Call or fill out our form. We review your case at zero cost and zero obligation — usually same day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We Investigate</h3>
+        <p>We gather evidence, pull records, depose witnesses, and build the strongest possible case for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Negotiate & Fight</h3>
+        <p>We face down the insurance companies. If they won't pay fair value, we take it to trial.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>You Get Paid</h3>
+        <p>We recover maximum compensation for your injuries, lost income, and everything else you're owed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cases-section" id="cases">
+  <div class="cases-inner">
+    <div class="section-tag">What We Handle</div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:3rem; text-transform:uppercase; margin-bottom:0.5rem;">Practice Areas</h2>
+    <p style="color:var(--gray); max-width:600px; line-height:1.7; margin-bottom:0;">We fight every kind of personal injury and civil rights case in Houston and Harris County, Texas.</p>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-icon">🚗</div>
+        <div class="case-title">Car Accidents</div>
+        <div class="case-desc">All types of motor vehicle crashes — rear-ends, DUI, failure to yield, and multi-vehicle pile-ups.</div>
+        <div class="case-link">→</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🚛</div>
+        <div class="case-title">18-Wheeler & Trucking</div>
+        <div class="case-desc">Federal regulations, black-box data, and carrier liability. These cases require specialized knowledge.</div>
+        <div class="case-link">→</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">⚖️</div>
+        <div class="case-title">Civil Rights · § 1983</div>
+        <div class="case-desc">Excessive force, unlawful arrest, and Monell claims against government entities.</div>
+        <div class="case-link">→</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🏛️</div>
+        <div class="case-title">Government Vehicle Claims</div>
+        <div class="case-desc">City and county vehicle crashes under the Texas Tort Claims Act. Notice deadlines apply — act fast.</div>
+        <div class="case-link">→</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🕊️</div>
+        <div class="case-title">Wrongful Death</div>
+        <div class="case-desc">Fighting for families when negligence costs an irreplaceable life. Full survivor's damages pursued.</div>
+        <div class="case-link">→</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🏗️</div>
+        <div class="case-title">Work & Construction Injuries</div>
+        <div class="case-desc">Serious on-the-job injuries — third-party claims, OSHA violations, and unsafe site conditions.</div>
+        <div class="case-link">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="attorney-section" id="attorney">
+  <div class="attorney-inner">
+    <div class="atty-img-wrap">
+      <div class="atty-img"></div>
+      <div class="atty-name-plate">
+        <div class="name">Joshua R. Willoughby</div>
+        <div class="title">Principal Attorney · The Willoughby Law Firm, PLLC</div>
+      </div>
+    </div>
+    <div class="atty-content">
+      <div class="section-tag">Your Attorney</div>
+      <h2>Meet<br>Josh Willoughby</h2>
+      <p>Joshua Willoughby founded The Willoughby Law Firm because he believes injured people deserve more than a quick settlement — they deserve a fighter. Based in Houston's Midtown, Josh handles personal injury and civil rights cases with the tenacity and preparation of a trial lawyer, not a negotiator.</p>
+      <p>From complex § 1983 civil rights claims in federal court to TTCA crashes involving government entities, Josh takes the hard cases other firms pass on. He prepares every case for trial from day one — which is exactly why insurers take him seriously at the settlement table.</p>
+      <div class="bar-items">
+        <div class="bar-item"><span class="icon">✓</span><span class="text">State Bar of Texas</span></div>
+        <div class="bar-item"><span class="icon">✓</span><span class="text">Texas Trial Lawyers Assoc.</span></div>
+        <div class="bar-item"><span class="icon">✓</span><span class="text">Houston Bar Association</span></div>
+        <div class="bar-item"><span class="icon">✓</span><span class="text">U.S. District Court, S.D. Tex.</span></div>
+      </div>
+      <a href="#contact" class="btn-red">Schedule Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="verdicts-section" id="verdicts">
+  <div class="verdicts-inner">
+    <div class="section-tag">Our Record</div>
+    <h2>Case Results</h2>
+    <div class="v-grid">
+      <div class="v-card"><div class="v-amount">$2.4M</div><div class="v-type">18-Wheeler Collision</div><div class="v-detail">Harris County · Spinal Injury</div></div>
+      <div class="v-card"><div class="v-amount">$1.85M</div><div class="v-type">Civil Rights — § 1983</div><div class="v-detail">S.D. Texas · Excessive Force</div></div>
+      <div class="v-card"><div class="v-amount">$950K</div><div class="v-type">Wrongful Death</div><div class="v-detail">Galveston County</div></div>
+      <div class="v-card"><div class="v-amount">$780K</div><div class="v-type">Construction Injury</div><div class="v-detail">Harris County</div></div>
+    </div>
+    <p style="color:rgba(255,255,255,0.2); font-size:0.75rem; margin-top:2rem; font-style:italic;">Past results do not guarantee similar outcomes. Each case is unique.</p>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-tag">Client Reviews</div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:3rem; text-transform:uppercase;">What Clients Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Josh never backs down. The trucking company's lawyers threw everything at us and he came back harder every time. We got three times what they offered at the start."</p>
+        <div class="review-author"><div class="review-name">Roberto E.</div><div class="review-case">18-Wheeler Accident · I-10</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My § 1983 case was complex and scary. Josh knew every angle and kept me informed throughout. Two years later we had a victory I didn't think was possible."</p>
+        <div class="review-author"><div class="review-name">Darnell W.</div><div class="review-case">Civil Rights · S.D. Texas</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"From the first call to the settlement check, Josh and his team were incredible. They dealt with the insurance company so I could focus on healing. Highly recommend."</p>
+        <div class="review-author"><div class="review-name">Maria T.</div><div class="review-case">Auto Accident · Houston</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Don't Face Them<br>Alone.</h2>
+  <p>Get a free, confidential case review today. No obligations. No fine print.</p>
+  <a href="#contact" class="btn-cta-white">Start Your Free Case Review</a>
+  <a href="tel:7132221356" class="cta-phone">(713) 222-1356</a>
+  <p style="font-size:0.85rem; margin-top:0.5rem; color:rgba(255,255,255,0.6);">Available 24/7 · No Fee Unless We Win · Houston, Texas</p>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="f-brand">
+      <div class="f-logo">WILLOUGHBY <span>LAW FIRM</span>, PLLC</div>
+      <p>Fighting for injured Texans throughout Houston and Harris County. Tenacious representation at every stage of your case.</p>
+      <address>4306 Yoakum Blvd, Suite 330<br>Houston, Texas 77006<br><br><a href="tel:7132221356" style="color:var(--red); text-decoration:none;">(713) 222-1356</a></address>
+    </div>
+    <div class="f-col">
+      <h4>Practice Areas</h4>
+      <ul>
+        <li><a href="#">Car Accidents</a></li>
+        <li><a href="#">18-Wheeler Crashes</a></li>
+        <li><a href="#">Civil Rights · § 1983</a></li>
+        <li><a href="#">Wrongful Death</a></li>
+        <li><a href="#">Work Injuries</a></li>
+        <li><a href="#">Government Claims</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>The Firm</h4>
+      <ul>
+        <li><a href="#">About Josh</a></li>
+        <li><a href="#">Case Results</a></li>
+        <li><a href="#">Client Reviews</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:7132221356">(713) 222-1356</a></li>
+        <li><a href="#">Free Consultation</a></li>
+        <li><a href="#">Get Directions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 The Willoughby Law Firm, PLLC · All Rights Reserved</p>
+    <p><a href="#" style="color:inherit; text-decoration:none;">Privacy</a> &nbsp;·&nbsp; <a href="#" style="color:inherit; text-decoration:none;">Disclaimer</a></p>
+  </div>
+  <p class="disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship. Past results do not guarantee similar outcomes. Joshua R. Willoughby is licensed to practice law in Texas.</p>
+</footer>
+
+</body>
+</html>

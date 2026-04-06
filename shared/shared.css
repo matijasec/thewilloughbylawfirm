@@ -1,0 +1,65 @@
+/* ================================================
+   WILLOUGHBY LAW FIRM — SHARED STYLES
+   willoughby-site/shared/shared.css
+   ================================================ */
+
+/* === IMAGE PLACEHOLDERS ===
+   Replace any .img-placeholder background with your
+   final photo URL once you have MidJourney outputs.
+   
+   Example:
+   .hero-bg { background-image: url('../images/hero-courthouse.jpg'); }
+   
+   Each placeholder is labeled with its prompt reference
+   from photo-prompts.html
+*/
+
+/* Hero backgrounds — replace with MidJourney outputs */
+.img-hero-courthouse {
+  /* REPLACE: Hero A — attorney in courthouse corridor */
+  background: #0a1628 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&q=80') center/cover no-repeat;
+}
+.img-hero-houston {
+  /* REPLACE: Hero C — Houston skyline silhouette */
+  background: #111 url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1400&q=80') center/cover no-repeat;
+}
+.img-hero-scales {
+  /* REPLACE: Hero B — brass scales of justice macro */
+  background: #0d1f36 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80') center/cover no-repeat;
+}
+
+/* Attorney portrait — REPLACE with real headshot or MidJourney Portrait A/B */
+.img-attorney-portrait {
+  background: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&q=80') center top/cover;
+}
+
+/* Practice area cards — REPLACE with MidJourney PA-01 through PA-08 */
+.img-pa-car       { background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80') center/cover; }
+.img-pa-truck     { background: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80') center/cover; }
+.img-pa-civil     { background: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=600&q=80') center/cover; }
+.img-pa-gov       { background: url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600&q=80') center/cover; }
+.img-pa-death     { background: url('https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=600&q=80') center/cover; }
+.img-pa-workplace { background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80') center/cover; }
+.img-pa-slip      { background: url('https://images.unsplash.com/photo-1578758837674-93ed9934a660?w=600&q=80') center/cover; }
+.img-pa-moto      { background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&q=80') center/cover; }
+
+/* Trust photos — REPLACE with MidJourney Trust A/B/C/D */
+.img-trust-meeting  { background: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&q=80') center/cover; }
+.img-trust-houston  { background: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=1200&q=80') center/cover; }
+
+
+/* === ICON HELPER ===
+   Usage: <svg class="icon icon-md"><use href="../../shared/icons/icons.svg#icon-car"/></svg>
+*/
+.icon { display: inline-block; flex-shrink: 0; }
+.icon-sm  { width: 20px; height: 20px; }
+.icon-md  { width: 32px; height: 32px; }
+.icon-lg  { width: 48px; height: 48px; }
+.icon-xl  { width: 64px; height: 64px; }
+
+/* White variant for dark backgrounds */
+.icon-white { color: #ffffff; }
+/* Standard dark variant */
+.icon-dark  { color: #1a1a1a; }
+/* Teal variant for V3 */
+.icon-teal  { color: #1a4a4a; }
